@@ -1,0 +1,56 @@
+@import "../../vars";
+
+.sectionTitle {
+    
+}
+
+.sectionTitle__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 800px;
+    padding: $padding__safe;
+    box-sizing: content-box;
+    background-repeat: no-repeat;
+    background-size: 1300px;
+    background-position: 0px 150px;
+
+}
+.sectionTitle__txt {
+    max-width: 400px;
+    // background-color: white;
+    // border-radius: 50%;
+    // padding: 90px;
+    h1 {
+        font-size: $font-size__title_h1;
+        font-weight: $font-weight__title;
+        margin-bottom: 30px;
+    }
+    p {
+        margin-bottom: 70px;
+        font-size: $font-size__p;
+        font-weight: $font-weight__p;
+
+    }
+    button {
+
+    }
+}
+.sectionTitle__img {
+    min-width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    overflow: hidden;
+    animation: imgHover $animation-duration__main+2s ease alternate infinite;
+}
+
+@keyframes imgHover {
+    from {
+        transform: translate(0, -5px);
+        // box-shadow: 0 0 0 rgba(0,0,0,0);
+    }
+    to {
+        transform: translate(0, 5px);
+        // box-shadow: 0 0 10px rgba(0,0,0,.5);
+    }
+}

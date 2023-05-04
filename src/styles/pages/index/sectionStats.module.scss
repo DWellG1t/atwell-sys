@@ -1,0 +1,35 @@
+@import "../../vars";
+
+.sectionStats {
+    background-color: $background-color__dark;
+    box-shadow: 0 0 20px rgba(0,0,0,.8);
+}
+.sectionStats__container {
+    padding: $padding__safe;
+    box-sizing: content-box;
+}
+.sectionStats__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 300px;
+}
+.sectionStats__el {
+    position: relative;
+    h1 {
+        color: $font-color__sub;
+        font-size: $font-size__title_h1 + 12rem;
+        font-weight: $font-weight__title;
+        
+    }
+    p {
+        color: $font-color__white;
+        font-size: $font-size__p;
+        font-weight: $font-weight__p;
+        position: absolute;
+        top: 60%;
+        transform: translate(0, -50%);
+        text-align: right;
+        right: -30px;
+    }
+}

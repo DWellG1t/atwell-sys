@@ -1,0 +1,72 @@
+@import "../vars";
+
+.footer {
+    background-color: $background-color__dark;
+}
+.footer__container {
+    height: 300px;
+    padding: $padding__safe;
+    box-sizing: content-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__logo {
+    display: flex;
+    color: $font-color__white;
+    height: 140px;
+}
+.footer__img {
+    height: 100%;
+    width: 140px;
+    margin-right: 20px;
+
+}
+
+.footer__text {
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    h1 {
+        font-size: $font-size__title_h2;
+        font-weight: $font-weight__title;
+        margin-bottom: 15px;
+    }
+    p {
+        font-size: $font-size__p;
+        font-weight: $font-weight__p;
+    }
+    .footer__ip {
+        font-size: $font-size__p - .5rem;
+        font-weight: $font-weight__p;
+    }
+}
+
+.footer__contacts {
+    color: $font-color__white;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    h1 {
+        font-size: $font-size__title_h2;
+        font-weight: $font-weight__title;
+        margin-bottom: 15px;
+    }
+    p {
+        font-size: $font-size__p;
+
+    }
+    a {
+        color: inherit;
+    }
+    button {
+        background: none;
+        color: $font-color__white;
+        border: 2px solid $background-color__white;
+        margin-right: 20px;
+    }
+}

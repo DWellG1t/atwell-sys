@@ -1,0 +1,95 @@
+@import "../vars";
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+}
+.header__container {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: content-box;
+    padding: $padding__safe;
+
+}
+.header__list {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__logo {
+    img {
+        width: 60px;
+        height: 60px;
+        margin-right: 10px;
+    }
+    display: flex;
+    align-items: center;
+    h1 {
+        font-size: $font-size__title_h2;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+    p {
+        font-size: $font-size__p;
+        color: $font-color__sub;
+        font-weight: $font-weight__p;
+    }
+}
+.header__contacts {
+    display: flex;
+    div {
+        display: flex;
+        flex-direction: column;
+    }
+    button {
+        background: none;
+        color: $font-color__dark;
+        border: 2px solid $background-color__dark;
+        margin-right: 20px;
+    }
+    a:nth-child(1) {
+        font-size: $font-size__title_h2 - .2rem;
+        margin-bottom: 5px;
+        color: $font-color__dark;
+        font-weight: $font-weight__title;
+    }
+    a:nth-child(2) {
+        font-size: $font-size__p;
+        color: $font-color__sub;
+    }
+}
+
+.header__nav {
+    display: flex;
+
+    p:not(:last-child) {
+        margin-right: 40px;
+    }
+    p {
+        font-size: $font-size__p;    
+        transition: ease $transition-duration__hover;
+        a {
+            color: inherit;
+        }
+    }
+}
+
+@media(pointer: fine) {
+    .header__nav p:hover {
+        color: $background-color__accent;
+        cursor: pointer;
+        // text-shadow: $box-shadow__main;
+    }
+}
+
+.header__service {
+    background-color: black;
+    width: 400px;
+    height: 400px;
+}

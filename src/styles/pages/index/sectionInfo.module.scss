@@ -1,0 +1,31 @@
+@import "../../_vars.scss";
+
+.sectionInfo {
+
+}
+
+.sectionInfo__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 600px;
+}
+
+.sectionInfo__img {
+    width: 400px;
+    height: 400px;
+
+}
+.sectionInfo__text {
+    max-width: 500px;
+    h1 {
+        font-size: $font-size__title_h1;
+        font-weight: $font-weight__title;
+        margin-bottom: 30px;
+    }
+    p {
+        font-size: $font-size__p;
+        font-weight: $font-weight__p;
+    }
+
+}

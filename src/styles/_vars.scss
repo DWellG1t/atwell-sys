@@ -1,0 +1,50 @@
+// Background
+    // color
+    $background-color__accent: #4169e1; // 
+    $background-color__dark:   #212227; // 33 34 39
+    $background-color__light:  #393C4A;
+    $background-color__white:  white;
+    
+    // Font
+        // color
+    $font-color__white:     white;
+    $font-color__dark:     #212227;
+    $font-color__sub:       #393C4A;
+        // size
+    $font-size__p:  1.8rem;
+    $font-size__title_h2:  2.4rem;
+    $font-size__title_h1:  5.2rem;
+        // weight
+    $font-weight__p: 400;
+    $font-weight__title: 700;
+    
+    // Container
+        // width
+    $width__container: 1200px;
+    
+    // Box
+        // padding
+    $padding__safe: 0 25px;
+    $padding__popup: 60px 60px;
+    $padding__block: 50px;
+        // margin
+    $margin__section: 80px;
+    $margin__block: 20px;
+        // border
+    $border__main: 1px solid rgba(0,0,0,.2);
+        // radius
+    $border-radius__button: 16px;
+    $border-radius__popup: 32px;
+        
+        // shadow
+    $box-shadow__main: 0 0 10px rgba(0,0,0,.5);
+    
+    // Animation
+    $animation-duration__main: 1s;
+    
+    // Hover
+    $transition-duration__hover: .3s;
+    
+    
+    
+    

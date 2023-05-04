@@ -1,0 +1,81 @@
+@import "./_vars.scss";
+
+/* Drop*/
+*{padding: 0;margin: 0;border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none  ;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+/*--------------------*/
+
+// Пояснение к некоторым техническим классам
+    // _active       - элемент активен
+    // _desk         - на ПК 
+    // _mobile       - на мобильных устройствах
+    // _intersection - когда пересечение происходит
+
+html {
+    font-family: roboto, 'Courier New', Courier, monospace !important;
+    font-size: 10px;
+}
+
+._wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+._container {
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+.main {
+    flex: 1 1 auto;
+}
+
+._button {
+    width: 160px;
+    height: 50px;
+    background-color: $background-color__dark;
+    color: $font-color__white;
+    border-radius: $border-radius__button;
+    font-size: $font-size__p;
+    font-weight: $font-weight__p;
+    transition: ease $transition-duration__hover;
+} 
+
+@media (pointer: fine) {
+    ._button:hover {
+        background-color: $background-color__accent;
+        border-color: $background-color__accent;
+        box-shadow: 0 0 20px rgba(0,0,0,.5);
+        color: white;
+    }   
+}
+
+._ibg {
+    position: relative;
+    img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        object-fit: cover;
+    }
+}
+
+
