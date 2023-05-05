@@ -1,4 +1,4 @@
-@import "../vars";
+@import "../../styles/vars";
 
 .SD {
     background-color: rgb(24, 24, 24);
@@ -13,4 +13,6 @@
         font-size: $font-size__p - .8rem;
         color: white;
     }
+    padding: $padding__safe;
+    box-sizing: content-box;
 }

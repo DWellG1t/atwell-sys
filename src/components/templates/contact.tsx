@@ -1,4 +1,4 @@
-import styles from "@/styles/templates/contact.module.scss";
+import styles from "./contact.module.scss";
 import { FaHeadphonesAlt, FaPhoneAlt } from "react-icons/fa";
 import {GrMail} from "react-icons/gr";
 import Link from "next/dist/client/link";

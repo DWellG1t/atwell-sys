@@ -1,0 +1,77 @@
+@import "../../../styles/vars";
+
+
+.sectionService {
+
+    // background-color: $background-color__dark;
+
+}
+
+.sectionService__container {
+    padding: $padding__safe;
+    box-sizing: content-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+
+}
+
+.sectionService__card {
+    margin-top: 30px;
+    display: flex;
+    // justify-items: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    // background-color: $background-color__accent;
+    color: $font-color__sub;
+    height: 250px;
+    width: 250px;
+    border-radius: $border-radius__button;
+    border: solid 1px $background-color__dark;
+    position: relative;
+    transition: ease $transition-duration__hover;
+    cursor: pointer;
+    h1 {
+        font-size: $font-size__title_h2;
+        font-weight: $font-weight__title;
+        margin-bottom: 15px;
+        z-index: 1;
+        color: $background-color__dark;
+        transition: ease $transition-duration__hover;
+    }
+
+    p {
+        // font-size: $font-size__p;
+        // z-index: 1;
+        // color: red;
+    }
+    div {
+        font-size: 11rem;
+        color: $background-color__dark;
+        // position: absolute;
+        // z-index: 0;
+        transition: ease $transition-duration__hover;
+
+    }
+
+}
+
+@media (pointer: fine) {
+    .sectionService__card:hover {
+        box-shadow: $box-shadow__main;
+        transform: translate(0, -10px);
+        border-color: $background-color__accent;
+        background-color: $background-color__accent;
+        h1 {
+            color: white;
+        }
+        div {
+            color: white;
+        }
+    }
+
+
+}

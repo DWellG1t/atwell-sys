@@ -1,4 +1,4 @@
-import styles from "@/styles/templates/contactPopup.module.scss";
+import styles from "./contactPopup.module.scss";
 
 import { useSelector, useDispatch } from "react-redux";
 import { setActive } from "@/store/popupSlice";

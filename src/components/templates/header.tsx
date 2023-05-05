@@ -1,4 +1,4 @@
-import styles from "@/styles/templates/header.module.scss";
+import styles from "./header.module.scss";
 import Link from "next/link";
 
 // button
@@ -16,14 +16,16 @@ export default function Header() {
         <header className={styles.header}>
             <div className={`${styles.header__container} _container`}>
             <ul className={styles.header__list}>
-
+                
+                <Link href={"/"}>
                 <li className={styles.header__logo}>
-                <img src="/img/pages/index/logo.svg" alt="" />
+                    <img src="/img/pages/index/logo.svg" alt="" />
                 <div>
                     <h1>Денис</h1>
                     <p>Компьютерный мастер</p>
                 </div>
                 </li>
+                </Link>
 
                 <nav className={styles.header__nav}>
                     <p><Link href={"/blog"}>Услуги</Link></p>

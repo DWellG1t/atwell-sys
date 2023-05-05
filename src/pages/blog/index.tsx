@@ -2,6 +2,8 @@ import Head from 'next/head'
 
 import { useEffect } from 'react';
 
+import SectionBlogCatalog from '@/components/pages/blog/sectionBlogCatalog';
+
 // Components
 import Header from "@/components/templates/header";
 import SectionTitle from "@/components/pages/index/sectionTitle";
@@ -52,7 +54,7 @@ export default function Home() {
      
       </Head>
 
-      
+      <SectionBlogCatalog />
     </>
   )
 }

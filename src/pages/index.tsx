@@ -8,6 +8,7 @@ import SectionTitle from "@/components/pages/index/sectionTitle";
 import SectionStats from "@/components/pages/index/sectionStats";
 import SectionSlider from "@/components/pages/index/sectionSlider";
 import SectionInfo from '@/components/pages/index/sectionInfo';
+import SectionService from '@/components/pages/index/sectionService';
 import Footer from "@/components/templates/footer";
 
 export default function Home() {
@@ -52,13 +53,12 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" />
      
       </Head>
-      
 
           <SectionTitle />
           <SectionStats />
           <SectionSlider />
           <SectionInfo />
-          
+          <SectionService />
     </>
   )
 }

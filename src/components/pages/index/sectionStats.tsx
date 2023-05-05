@@ -1,4 +1,4 @@
-import styles from "@/styles/pages/index/sectionStats.module.scss";
+import styles from "./sectionStats.module.scss";
 
 export default function SectionStats() {
     return (

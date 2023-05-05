@@ -1,4 +1,4 @@
-import styles from "@/styles/pages/index/sectionInfo.module.scss";
+import styles from "./sectionInfo.module.scss";
 
 export default function SectionInfo() {
     return (

@@ -1,0 +1,80 @@
+@import "../../styles/vars";
+
+
+.footer {
+    background-color: $background-color__dark;
+}
+.footer__container {
+    height: 300px;
+    padding: $padding__safe;
+    box-sizing: content-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+.footer__text {
+    height: 100%;
+    color: white;
+    display: flex;
+    // align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    h1 {
+        font-size: $font-size__title_h1;
+        font-weight: $font-weight__title;
+        margin-bottom: 30px;
+    }
+    p {
+        font-size: $font-size__p;
+        font-weight: $font-weight__p;
+    }
+}
+
+.footer__form {
+    background-color: $background-color__dark;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    justify-content: space-between;
+    input {
+        height: 40px;
+        background-color: $background-color__light;
+        border-radius: $border-radius__button;
+        padding-left: 15px;
+        color: white;
+        font-size: $font-size__p;
+    }
+    input:focus {
+        border: solid 1px $background-color__accent;
+    }
+    input:not(:last-child) {
+        margin-bottom: 10px;
+    }
+    
+    textarea {
+        &:focus {
+            border: solid 1px $background-color__accent;    
+        }
+        background-color: $background-color__light;
+        border-radius: $border-radius__button;
+        padding-left: 15px;
+        padding-top: 5px;
+        color: white;
+        font-size: $font-size__p;
+        height: 100px;
+        resize: none;
+    }
+
+    button {
+        align-self: flex-end;
+        border: 1px solid white;
+    }
+
+}

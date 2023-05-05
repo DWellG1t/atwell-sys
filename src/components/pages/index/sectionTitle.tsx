@@ -1,5 +1,4 @@
-import styles from "@/styles/pages/index/sectionTitle.module.scss";
-import PopupContact from "@/components/templates/contactPopup";
+import styles from "./sectionTitle.module.scss";
 
 import { useDispatch, useSelector } from "react-redux";
 import { setActive } from "@/store/popupSlice"; // setActive был экспортирован в срезе (для dispatch)
@@ -16,7 +15,6 @@ export default function SectionTitle() {
 
   return (
     <>
-      <PopupContact />
       <section className={ styles.sectionTitle } >
         {/* background */}
         <div className={`${styles.sectionTitle__container} _container`} style={{ backgroundImage: `url(${bg.src})` }}>

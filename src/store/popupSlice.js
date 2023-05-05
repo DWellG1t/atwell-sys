@@ -8,7 +8,10 @@ const popupSlice = createSlice({
     },
     reducers: { // сами reducers
         setActive(state, action){ // state - текущее состояние, action - полученный action
-            state.active = !state.active; // Этого достаточно для изменения состояния
+            if(action.payload == "false") 
+                state.active = false;
+            else
+                state.active = !state.active; // Этого достаточно для изменения состояния
         },
     }
 })

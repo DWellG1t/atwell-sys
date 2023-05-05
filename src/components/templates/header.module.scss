@@ -1,4 +1,4 @@
-@import "../vars";
+@import "../../styles/vars";
 
 .header {
     position: absolute;
@@ -34,6 +34,7 @@
         font-size: $font-size__title_h2;
         font-weight: 500;
         margin-bottom: 5px;
+        color: $font-color__dark;
     }
     p {
         font-size: $font-size__p;

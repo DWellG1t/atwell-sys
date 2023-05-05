@@ -1,4 +1,4 @@
-@import "../_vars.scss";
+@import "../../styles/vars";
 
 .backgroundDark {
     position: fixed;
@@ -81,6 +81,10 @@
         color: $font-color__white;
         font-size: $font-size__p;
         font-weight: $font-weight__p;
+
+        &:focus {
+            border: solid 1px $background-color__accent;
+        }
     }
     textarea {
         resize: none;
@@ -93,6 +97,10 @@
         color: $font-color__white;
         font-size: $font-size__p;
         font-weight: $font-weight__p;
+        
+        &:focus {
+            border: solid 1px $background-color__accent;
+        }
     }
     height: 100%;
     display: flex;
@@ -107,8 +115,8 @@
     position: absolute;
     width: 22px;
     height: 22px;
-    top: 40px;
-    right: 40px;
+    top: 30px;
+    right: 30px;
     cursor: pointer;
     transition: ease $transition-duration__hover;
     &::before, &::after {
@@ -119,6 +127,8 @@
         background-color: $background-color__white;
         position: absolute;
         transition: ease $transition-duration__hover;
+        top: 50%;
+        transform: translate(0, -50%);
         display: flex;
         align-items: center;
     }

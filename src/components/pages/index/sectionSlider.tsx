@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-key */
-import styles from "@/styles/pages/index/sectionSlider.module.scss";
+import styles from "./sectionSlider.module.scss";
 import { SlArrowRight, SlArrowLeft } from "react-icons/sl";
 import { useState } from "react";
 

@@ -1,4 +1,4 @@
-import styles from "@/styles/templates/sectionSD.module.scss"
+import styles from "./SD.module.scss"
 
 export default function SD() {
     return (
