@@ -1,0 +1,50 @@
+@import "../../../styles/vars";
+
+.sectionPrice {
+@extend %padding__section;
+
+}
+
+.sectionPrice__container {
+    @extend %padding__safe;
+    >h1 {
+        @extend %title_h1;
+        margin-bottom: $margin__text_h1;
+    }
+    ul {
+        width: 100%;
+        // max-height: 180px;
+        overflow: hidden;
+        h1 {
+            @extend %paragraph_p1;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: $box-shadow__main;
+            padding: 0 $padding__menu;
+            background-color: $background-color__accent;
+            height: $height__button;
+            border-radius: $border-radius__button;
+            color: $font-color__white;
+            div {
+                text-align: center;
+                width: 100px;
+                white-space: nowrap;
+            }
+        }
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 $padding__menu;
+            box-sizing: border-box;
+            height: $height__button;
+            @extend %paragraph_p2;
+            div {
+                width: 100px;
+                text-align: center;
+            }
+        }
+    }
+}

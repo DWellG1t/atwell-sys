@@ -1,0 +1,125 @@
+@import "../../../styles/vars";
+
+.sectionOrder {
+    @extend %padding__section;
+
+}
+
+.sectionOrder__container {
+    @extend %padding__safe;
+    display: flex;
+    justify-content: space-between;
+
+
+    form {
+        input {
+            border: 1px solid $background-color__form;
+            border-radius: $border-radius__button;
+            height: 40px;
+            width: 240px;
+            padding: 0 0 0 $padding__menu;
+            @extend %paragraph_p1;
+            // font-weight: 400;
+            transition: $transition-duration__hover ease;
+        }
+
+        input:focus {
+            box-shadow: $box-shadow__main;
+            border-color: rgba(0,0,0,0);
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+            height: 100%;
+            justify-content: space-between;
+            li:nth-child(1) {
+                display: flex;
+                justify-content: space-between;
+            }
+    
+            
+            li:nth-child(2) {
+                input {
+                    border: 1px solid $background-color__form;
+                    border-radius: $border-radius__button;
+                    height: 40px;
+                    width: 100%;
+                    padding: 0 0 0 $padding__menu;
+                }
+            }
+
+                        
+            li:nth-child(3) {
+                input {
+                    border: 1px solid $background-color__form;
+                    border-radius: $border-radius__button;
+                    height: 40px;
+                    width: 100%;
+                    padding: 0 0 0 $padding__menu;
+                }
+            }
+    
+            
+            li:nth-child(4) {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                p {
+                    @extend %title_h2;
+                }
+            }
+        }
+    
+    }
+}
+
+
+
+.sectionOrder__terminal {
+    background-color: black;
+    border-radius: $border-radius__popup;
+    font-family: Trigram;
+    width: 500px;
+    // max-height: 200px;
+    box-shadow: $box-shadow__main;
+
+    padding: 25px 25px;
+
+
+    h2 {
+        @extend %paragraph_p1;
+        color: $font-color__white;
+
+        margin-bottom: 20px;
+    }
+
+    h2.sectionOrder__root {
+        display: flex;
+        margin-bottom: 0;
+        p:nth-child(1) {
+            color: $background-color__accent; 
+        }
+        p:nth-child(2) {
+            // color: $background-color__accent; 
+            align-self: flex-end;
+            @extend %paragraph_p2;
+            color: white;
+        }
+    }
+
+    ul {
+        margin-bottom: 20px;
+        li {
+            @extend %paragraph_p2;
+            color: $font-color__white;
+        }
+        li:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+
+}
+
+

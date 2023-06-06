@@ -1,0 +1,88 @@
+@import "../../../styles/vars";
+
+.sectionQuestions {
+    @extend %padding__section;
+}
+
+.sectionQuestions__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @extend %padding__safe;
+
+
+
+}
+
+.sectionQuestions__column {
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
+    ul {
+        // padding: 0 10px;
+
+        
+        max-width: 500px;
+
+        li {
+            transition: ease $animation-duration__main;
+        }
+        li:nth-child(1) {
+            display: flex;
+            justify-content: space-between;
+            box-shadow: $box-shadow__main;
+            padding: $padding__menu;
+            margin-bottom: 10px;
+            border-radius: $border-radius__button;
+            h1 {
+                @extend %paragraph_p1;
+                // font-weight: 500;
+            }
+        }
+        li:nth-child(2) {
+            max-height: 0px;
+            overflow: hidden;
+
+            
+
+            p {
+                @extend %paragraph_p2;
+            }
+        }
+      
+    }
+
+    ul:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+
+    ul:hover {
+        li:nth-child(2) {
+            max-height: 100px;
+        }
+
+    }
+
+
+}
+
+.sectionQuestions__column_1 {
+
+}
+
+.sectionQuestions__column_2 {
+
+}
+
+.sectionQuestions__title {
+    @extend %padding__safe;
+
+
+    h1 {
+        @extend %title_h1;
+        text-align: right;
+        margin-bottom: $margin__text_h1;
+    }
+}

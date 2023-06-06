@@ -1,0 +1,69 @@
+@import "../../../styles/vars";
+
+.sectionFirst {
+    @extend %padding__section;
+    // box-shadow: $box-shadow__main inset;
+    // background-color: white;
+}
+
+.sectionFirst__container {
+    @extend %padding__safe;
+
+
+    // flex-direction: column;
+
+}
+.sectionFirst__data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.sectionFirst__img {
+    height: 400px;
+    width: 500px;
+    z-index: -1;
+}
+
+.sectionFirst__info {
+    div {
+        margin-bottom: 30px;
+    }
+
+    h2 {
+        // color: $background-color__accent;
+    }
+    .sectionFirst__typed {
+        font-weight: $font-weight__p;
+        color: $font-color__sub;
+    }
+}
+
+
+// terminal
+.sectionFirst__terminal {
+    // height: 120px;
+    box-shadow: $box-shadow__main;
+    border-radius: $border-radius__popup;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 0;
+    font-family: Trigram;
+    font-size: 1.4rem;
+    // min-width: 0;
+    // position: relative;
+    @extend %paragraph_p1;
+}
+.sectionFirst__news {
+    // transition-timing-function: linear;
+    color: white;
+    width: 100%;
+    // Для линейной скорости!
+    >div {
+        transition-timing-function: linear !important;
+
+    }
+}

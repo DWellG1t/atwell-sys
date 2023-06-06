@@ -1,48 +1,13 @@
-import Head from 'next/head'
-
-import { useEffect } from 'react';
+import Head from 'next/head';
 
 // Components
-import Header from "@/components/templates/header";
-import SectionTitle from "@/components/pages/index/sectionTitle";
-import SectionStats from "@/components/pages/index/sectionStats";
-import SectionSlider from "@/components/pages/index/sectionSlider";
-import SectionInfo from '@/components/pages/index/sectionInfo';
-import SectionService from '@/components/pages/index/sectionService';
-import Footer from "@/components/templates/footer";
+import SectionFirst from '@/components/pages/index/sectionFirst';
+import SectionQuestions from '@/components/pages/index/sectionQuestions';
+import SectionOrder from '@/components/pages/index/sectionOrder';
+import SectionPrice from '@/components/pages/index/sectionPrice';
 
 export default function Home() {
-    // Необходимо при SSR, т.к. navigator не определен будет до выгрузки на клиент
-    useEffect(() => {
-      const isMobile = {
-        Android: function() {
-            return navigator.userAgent.match(/Android/i);
-        },
-        BlackBerry: function() {
-            return navigator.userAgent.match(/BlackBerry/i);
-        },
-        iOS: function() {
-            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-        },
-        Opera: function() {
-            return navigator.userAgent.match(/Opera Mini/i);
-        },
-        Windows: function() {
-            return navigator.userAgent.match(/IEMobile/i);
-        },
-        any: function() {
-            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-        }
-        };
-        
-        if (isMobile.any()) {
-        document.querySelector("html")?.classList.add("_mobile");
-        } else {
-        document.querySelector("html")?.classList.add("_desk");
-        }
-    })
 
-  
   return (
     <>
       <Head>
@@ -51,15 +16,19 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         <link href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" />
-     
       </Head>
 
-          <SectionTitle />
-          <SectionStats />
-          <SectionSlider />
-          <SectionInfo />
-          <SectionService />
+      <SectionFirst />
+      <SectionQuestions />
+      <SectionOrder />
+      <SectionPrice />
+      
     </>
   )
 }
 
+// export async function getServerSI(context: any) {
+//   return {
+//     props: {}, // will be passed to the page component as props
+//   };
+// }

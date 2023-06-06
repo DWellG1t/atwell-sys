@@ -1,45 +1,56 @@
 // Background
     // color
-    $background-color__accent: #4169e1; // 
-    $background-color__dark:   #212227; // 33 34 39
-    $background-color__light:  #393C4A;
-    $background-color__white:  white;
+    $background-color__accent:    #4169E1; 
+    $background-color__dark:      #2B2D39; 
+    $background-color__light:     #404458;
+    $background-color__white:     #ffffff;
+    $background-color__subfooter: #14151B;
+    $background-color__form:      #d0d3e0;
     
     // Font
         // color
-    $font-color__white:     white;
-    $font-color__dark:     #212227;
-    $font-color__sub:       #393C4A;
+    $font-color__white: #ffffff;
+    $font-color__dark:  #2B2D39;
+    $font-color__sub:   #404458;          
         // size
-    $font-size__p:  1.8rem;
-    $font-size__title_h2:  2.4rem;
-    $font-size__title_h1:  5.2rem;
-    $font-size__title_h1_mobile: 2.1rem;
+
+    $font-size__title_lg: 9rem;
+    $font-size__title_h1: 4.8rem;
+    $font-size__title_h2: 2.4rem;
+    $font-size__p:        1.8rem;
+    $font-size__p_small:  1.4rem;    
     
         // weight
-    $font-weight__p: 400;
-    $font-weight__title: 700;
+    $font-weight__title_h1: 600;
+    $font-weight__title_h2: 500;
+    $font-weight__p:        400;
     
     // Container
         // width
-    $width__container: 1200px;
+    $width__container: 1076px;
+        // height
+    // $min-height_section: 00px;
     
     // Box
         // padding
-    $padding__safe: 0 25px;
+    $padding__safe: 25px;
+    $padding__section: 40px;
     $padding__popup: 60px 60px;
     $padding__block: 50px;
+    $padding__menu: 10px;
         // margin
     $margin__section: 80px;
     $margin__block: 20px;
+    $margin__text_h1: 30px;
         // border
     $border__main: 1px solid rgba(0,0,0,.2);
         // radius
-    $border-radius__button: 16px;
-    $border-radius__popup: 32px;
-        
+    $border-radius__button: 4px;
+    $border-radius__popup: 8px;
+        // height
+    $height__button: 45px;
         // shadow
-    $box-shadow__main: 0 0 10px rgba(0,0,0,.3);
+    $box-shadow__main: 0 0 5px rgba(0,0,0,.2);
     
     // Animation
     $animation-duration__main: 1s;
@@ -47,6 +58,39 @@
     // Hover
     $transition-duration__hover: .3s;
     
+// Templates
+    // Text
+%title_h1 {
+    font-size: $font-size__title_h1;
+    font-weight: $font-weight__title_h1;
+    color: $font-color__dark;
+}
+
+%title_h2 {
+    font-size: $font-size__title_h2;
+    font-weight: $font-weight__title_h2;
+    color: $font-color__dark;
+}
+
+%paragraph_p1 {
+    font-size: $font-size__p;
+    font-weight: $font-weight__p;
+    color: $font-color__sub;
+}
     
-    
-    
+%paragraph_p2 {
+    font-size: $font-size__p_small;
+    font-weight: $font-weight__p;
+    color: $font-color__sub;
+}
+
+    // section
+%padding__section {
+    padding: $padding__section 0;
+    box-sizing: content-box;
+}
+
+%padding__safe {
+    padding: 0 $padding__safe;
+    box-sizing: content-box;
+}
