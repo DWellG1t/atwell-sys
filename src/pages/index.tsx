@@ -5,6 +5,7 @@ import SectionFirst from '@/components/pages/index/sectionFirst';
 import SectionQuestions from '@/components/pages/index/sectionQuestions';
 import SectionOrder from '@/components/pages/index/sectionOrder';
 import SectionPrice from '@/components/pages/index/sectionPrice';
+import SectionReviews from '@/components/pages/index/sectionReviews';
 
 export default function Home() {
 
@@ -21,8 +22,9 @@ export default function Home() {
       <SectionFirst />
       <SectionQuestions />
       <SectionOrder />
+      <SectionReviews />
       <SectionPrice />
-      
+
     </>
   )
 }

@@ -39,6 +39,10 @@
     }
     div {
         @extend %paragraph_p1;
+        transition: ease $transition-duration__hover;
+        &:hover {
+            transform: scale(1.05, 1.05);
+        }
         a {
             color: inherit;
         }
@@ -92,7 +96,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: $background-color__dark;
+            background-color: $background-color__accent;
             z-index: 1;
             // box-shadow: $box-shadow__main;
             transition: ease $transition-duration__hover;
@@ -121,7 +125,7 @@
                 position: absolute;
                 top: 100%;
                 left: 0;
-                background-color: $background-color__dark;
+                background-color: $background-color__accent;
                 
                 min-width: 145px;
                 padding: 10px;
@@ -132,6 +136,11 @@
                     @extend %paragraph_p2;
                     color: $font-color__white;
                     white-space: nowrap;
+                    transition: ease $transition-duration__hover;
+                    &:hover {
+                        transform: scale(1.05, 1.05);
+                    }
+                    // transform: scale(1.1, 1.1);
                 }
                 p:not(:last-child) {
                     margin-bottom: 10px;

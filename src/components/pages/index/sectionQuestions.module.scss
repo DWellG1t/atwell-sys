@@ -27,8 +27,11 @@
 
         li {
             transition: ease $animation-duration__main;
+            height: 40px;
         }
         li:nth-child(1) {
+            transition: ease $transition-duration__hover;
+            cursor: pointer;
             display: flex;
             justify-content: space-between;
             box-shadow: $box-shadow__main;
@@ -38,11 +41,21 @@
             h1 {
                 @extend %paragraph_p1;
                 // font-weight: 500;
+                transition: ease $transition-duration__hover;
             }
+            div {
+                cursor: pointer;
+                @extend %paragraph_p1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: ease $transition-duration__hover;
+            }                           
         }
         li:nth-child(2) {
             max-height: 0px;
             overflow: hidden;
+            pointer-events: none;
 
             
 
@@ -57,12 +70,31 @@
         margin-bottom: 10px;
     }
 
+    @media(pointer: fine) {
+        ul {
 
-    ul:hover {
+            li:nth-child(1):hover {
+                background-color: $background-color__accent;
+                div {
+                    color: white;
+                }
+                h1 {
+                    color: white;
+
+                // box-shadow: 0 0 0 rgba(0,0,0,0);
+                }
+            }
+        }
+    }
+
+
+    ul._active {
         li:nth-child(2) {
             max-height: 100px;
         }
-
+        div {
+            transform: rotate(-180deg);
+        }
     }
 
 

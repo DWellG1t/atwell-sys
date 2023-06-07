@@ -6,7 +6,7 @@ const popupSlice = createSlice({
     initialState: { // Изначальные состояние *различные состояния, которые мы можем изменять при определенной логике. Можно добавить массив и др.
         active: false,
     },
-    reducers: { // сами reducers
+    reducers: { // сами reducers *функции, изменяющие состояние
         setActive(state, action){ // state - текущее состояние, action - полученный action
             if(action.payload == "false") 
                 state.active = false;

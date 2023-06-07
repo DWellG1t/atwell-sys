@@ -1,5 +1,9 @@
 import styles from "./sectionFirst.module.scss";
 
+import { useSelector, useDispatch } from "react-redux";
+import { setActive } from "@/store/popupSlice";
+// import type     
+
 // Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper";
@@ -26,6 +30,9 @@ export default function SectionFirst() {
     //     })
     // })
 
+    const dispatch = useDispatch();
+    const stats = useSelector(state => state.popup)
+
     return (
         <section className={styles.sectionFirst}>
             <div className={styles.sectionFirst__container + " _container"}>
@@ -49,7 +56,7 @@ export default function SectionFirst() {
                             
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius officiis cumque fuga adipisci quaerat optio! Praesentium velit tenetur, quibusdam, voluptas odio accusamus quaerat ab quod sunt, nesciunt vero quisquam dolor.</p>
                         </div>
-                        <button className={" _button"}>Связаться</button>
+                        <button className={" _button"} onClick={ () => { dispatch(setActive('')); }} >Связаться</button>
                     </div>
                     <div className={styles.sectionFirst__img + " _ibg"}>
                         <img src="https://thumbs.dreamstime.com/b/%D1%83%D0%B4%D0%B8%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9-%D0%BC%D1%83%D0%B6%D1%87%D0%B8%D0%BD%D0%B0-%D0%B2-%D0%BE%D1%87%D0%BA%D0%B0%D1%85-%D1%81%D0%B8%D0%B4%D0%B8%D1%82-%D0%BD%D0%B0-%D0%BA%D0%BB%D0%B0%D0%B2%D0%B8%D0%B0%D1%82%D1%83%D1%80%D0%B5-%D0%BF%D0%B5%D1%80%D0%B5%D0%B4-%D0%BA%D0%BE%D0%BC%D0%BF%D1%8C%D1%8E%D1%82%D0%B5%D1%80%D0%BE%D0%BC-194659160.jpg" alt="" />

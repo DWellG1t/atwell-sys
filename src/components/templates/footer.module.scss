@@ -1,1 +1,48 @@
 @import "../../styles/vars";
+
+.footer {
+    @extend %padding__section;
+}
+
+.footer__container {
+    @extend %padding__safe;
+}
+
+.footer__terminal {
+    background-color: black;
+    border-radius: $border-radius__popup;
+    box-shadow: $box-shadow__main;
+    padding: $padding__smallblock;
+    font-family: Trigram;
+
+    p {
+        @extend %paragraph_p2;
+        color: $font-color__white;
+        margin-bottom: 10px;
+    }
+    p::last-child {
+        margin-bottom: 20px
+    }
+    h2 {
+        @extend %paragraph_p1;
+        color: $font-color__white;
+        margin-bottom: 20px;
+    }
+}
+
+.footer__root {
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 0;
+    h2 {
+        margin-right: 10px;
+        margin-bottom: 0;
+        color: $background-color__accent;
+    }
+    p {
+        margin-bottom: 0;
+    }
+
+}

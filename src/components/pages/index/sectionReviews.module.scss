@@ -1,0 +1,71 @@
+@import "../../../styles/vars";
+
+
+.sectionReviews {
+    @extend %padding__section;
+}
+
+.sectionReviews__review {
+    padding: $padding__smallblock;
+    background-color: $background-color__white;
+    width: 320px;
+    height: 150px;
+    box-shadow: $box-shadow__main;   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: $border-radius__popup;
+}
+
+.sectionReviews__client {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    p {
+        @extend %paragraph_p1;
+        font-weight: 500;
+    }
+    margin-right: 20px;
+}
+
+
+.sectionReviews__img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.sectionReviews__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+    
+    p {
+        @extend %paragraph_p2;
+    }
+    h2 {
+        @extend %paragraph_p1;
+        
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        li:not(:last-child) {
+            margin-right: 5px;
+        }
+        li {
+            color: yellow;
+            font-size: 1.8rem;
+        }
+    }
+}
+.sectionReviews__slider {
+    padding: 10px 0;
+}

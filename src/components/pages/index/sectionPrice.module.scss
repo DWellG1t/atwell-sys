@@ -6,15 +6,20 @@
 }
 
 .sectionPrice__container {
+    overflow: visible;
     @extend %padding__safe;
     >h1 {
         @extend %title_h1;
         margin-bottom: $margin__text_h1;
     }
     ul {
+        // margin-bottom: 50px;
+        z-index: 50;
+        position: relative;
         width: 100%;
-        // max-height: 180px;
+        max-height: 380px;
         overflow: hidden;
+        transition: ease $animation-duration__main;
         h1 {
             @extend %paragraph_p1;
 
@@ -24,7 +29,7 @@
             box-shadow: $box-shadow__main;
             padding: 0 $padding__menu;
             background-color: $background-color__accent;
-            height: $height__button;
+            height: 40px;
             border-radius: $border-radius__button;
             color: $font-color__white;
             div {
@@ -45,6 +50,64 @@
                 width: 100px;
                 text-align: center;
             }
+        }
+    }
+}
+
+.sectionPrice__shadow {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: red;
+    background: linear-gradient(to top,  white, rgba(255,255,255, .2));
+    height: 240px;
+    width: 100%;
+    z-index: 40;
+    transition: $transition-duration__hover;
+}
+
+.sectionPrice__arrow {
+    // background: linear-gradient(to top,  white 20%, rgba(255,255,255, .5));
+    margin-top: 5px;
+    left: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    border-radius: $border-radius__button;
+    box-shadow: $box-shadow__main;
+    // padding-bottom: 20px;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    // margin-bottom: 40px;
+    @extend %paragraph_p1;
+    font-size: $font-size__p !important;
+    cursor: pointer;
+    transition: $transition-duration__hover;
+    span {
+        transition: ease $transition-duration__hover;
+    }
+
+}
+
+@media (pointer: fine) {
+    .sectionPrice__arrow {
+        &:hover 
+        {
+            background-color: $background-color__accent;
+            span {
+                transform: rotate(-180deg);
+                color: $font-color__white;
+            }
+        }
+    }
+}
+.sectionPrice__container {
+
+    ul._active {
+        max-height: 2000px;
+        .sectionPrice__shadow {
+            opacity: 0;
         }
     }
 }

@@ -1,0 +1,22 @@
+@import "../../styles/vars";
+
+.sectionSubfooter {
+    background-color: $background-color__subfooter;
+}
+
+.sectionSubfooter__container {
+    @extend %padding__safe;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p {
+        @extend %paragraph_p2;
+        color: $font-color__white;
+        span {
+            color: red;
+            margin: 0 5px;
+            // font-size: 18rem;
+        }
+    }
+}
