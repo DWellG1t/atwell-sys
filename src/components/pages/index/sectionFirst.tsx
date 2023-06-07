@@ -31,7 +31,7 @@ export default function SectionFirst() {
     // })
 
     const dispatch = useDispatch();
-    const stats = useSelector(state => state.popup)
+    const stats = useSelector((state: any) => state.popup)
 
     return (
         <section className={styles.sectionFirst}>

@@ -9,7 +9,7 @@ import { setActive } from "@/store/popupSlice";
 export default function PopupOrder() {
 
     const dispatch = useDispatch();
-    const popupActive = useSelector(state => state.popup);
+    const popupActive = useSelector((state: any) => state.popup);
 
     return (
     <div className={ styles.popupOrder  + (popupActive.active == true ? ` ${styles._active}` : "" )}>
