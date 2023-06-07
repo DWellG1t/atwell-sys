@@ -1,0 +1,120 @@
+@import "../../styles/vars";
+
+.sectionMobile {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 350px;
+    background-color: white;
+    z-index: 1000;
+    box-shadow: $box-shadow__main;
+    transition: ease $animation-duration__main;
+    padding: $padding__smallblock;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: translate(-100%, 0);
+    overflow: auto;
+    ul {
+        margin-top: 20px;
+        // margin-bottom: 10px;
+        width: 100%;
+        div {
+            max-height: 0px;
+            // overflow: hidden;
+            transition: ease $animation-duration__main;
+        }
+        h2 {
+            // @extend %paragraph_p1;
+            display: flex;
+            justify-content: space-between;
+            // cursor: pointer
+            @extend %title_h2;
+
+        }
+        li {
+            cursor: pointer;
+            // max-height: 100px;
+            overflow: hidden;
+            @extend %paragraph_p2;
+            // font-weight: 600;
+            p {
+                margin-top: 5px;
+            }
+            span {
+                transition: ease $transition-duration__hover;
+            }
+        }
+        li._active {
+            div {
+                max-height: 4000px;
+            }
+            h2 {
+                span {
+                    transform: rotate(-180deg);
+                }
+            }
+        }
+        li:not(:last-child) {
+            margin-bottom: 30px;
+
+        }
+    }
+}
+.sectionMobile._active {
+    transform: translate(0, 0);
+} 
+
+.sectionMobile__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    div:nth-child(1) {
+        img {
+            margin-right: 15px;
+        }
+        h2 {
+            margin-bottom: 5px;
+            @extend %title_h2;
+        }
+        p {
+            @extend %paragraph_p1;
+        }
+
+    }
+}
+
+.sectionMobile__cross {
+    position: relative;
+    top: 0;
+    right: 0;
+}
+
+.sectionMobile__logo {
+    display: flex;
+    align-items: center;
+    // justify-content: space-between;
+}
+
+.sectionMobile__terminal {
+    margin-top: 20px;
+    background: black;
+    width: 100%;
+    padding: $padding__smallblock;
+    box-shadow: $box-shadow__main;
+    border-radius: $border-radius__popup;
+    color: $font-color__white;
+    font-family: Trigram;
+    p {
+        @extend %paragraph_p2; 
+        color: $font-color__white;
+    }
+    p:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+.sectionMobile__root {
+
+}

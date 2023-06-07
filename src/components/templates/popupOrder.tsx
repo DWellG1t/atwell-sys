@@ -15,7 +15,7 @@ export default function PopupOrder() {
     <div className={ styles.popupOrder  + (popupActive.active == true ? ` ${styles._active}` : "" )}>
       <div className={styles.popup__background  + (popupActive.active == true ? ` ${styles._active}` : "" )} onClick={ () => { dispatch(setActive('')) }  }></div>
       <section className={styles.popup}>
-            <div className={styles.popup__cross} onClick={ () => { dispatch(setActive('')) }  }></div>
+            <div className={"_cross"} onClick={ () => { dispatch(setActive('')) }  }></div>
             <form action="">
 
                 <ul>
