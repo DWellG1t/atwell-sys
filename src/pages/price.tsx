@@ -7,7 +7,6 @@ import SectionOrder from '@/components/pages/index/sectionOrder';
 import SectionPrice from '@/components/pages/index/sectionPrice';
 import SectionReviews from '@/components/pages/index/sectionReviews';
 
-
 export default function Home() {
 
   return (
@@ -20,10 +19,6 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" />
       </Head>
 
-      <SectionFirst />
-      <SectionQuestions />
-      <SectionOrder />
-      <SectionReviews />
       <SectionPrice />
 
     </>

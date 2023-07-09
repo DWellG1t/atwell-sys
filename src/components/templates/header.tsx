@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 
 // 
 import { useDispatch, useSelector } from "react-redux";
-import { setActive } from "@/store/popupSlice";
+import { setActivePopup } from "@/store/popupSlice";
 import { setActiveMobile } from "@/store/mobileSlice";
 
 import { FaHeart } from "react-icons/fa";
@@ -13,13 +13,15 @@ import { BiDesktop } from "react-icons/bi";
 export default function Header() {
     const dispatch = useDispatch();
 
+    const mobileActive = useSelector((state: any) => state.mobile.mobileActive);
+
 
     return (
         <header className={styles.header}>
             <div className={styles.header__row_1}>
                 <div className={styles.header__container + " _container"}>
                     
-                    <div className={styles.header__burger} onClick={() => { dispatch(setActiveMobile('')) } }>
+                    <div className={styles.header__burger + (mobileActive ? ` ${styles._active}` : "")} onClick={() => { dispatch(setActiveMobile('')) } }>
                             <span></span>
                         </div>
                     
@@ -36,9 +38,9 @@ export default function Header() {
                     <nav className={styles.header__nav}>
                         {
                             [
-                                {href: "", txt: "Обо мне"},
-                                {href: "", txt: "Цены"},
-                                {href: "", txt: "Блог"},
+                                {href: "/", txt: "Главная"},
+                                {href: "/price", txt: "Цены"},
+                                {href: "/blog", txt: "Контакты"},
                                 
                             ].map((el, index) => {
                                 return (
@@ -51,7 +53,7 @@ export default function Header() {
                     </nav>
 
                     <div className={styles.header__contact}>
-                        <button className={"_button_v2 _button"} onClick={() => { dispatch(setActive(''))} }>Связаться</button>
+                        <button className={"_button_v2 _button"} onClick={() => { dispatch(setActivePopup(''))} }>Связаться</button>
                         <div>
                             <h1>
                             +7 977 591 82 92
@@ -93,7 +95,9 @@ export default function Header() {
                                             <div className={styles.header__dropdown}>
                                                 {el.service?.map((el, index) => {
                                                     return (
-                                                        <p key={index}>{el[0]} {el[1]}</p>
+                                                        <p key={index} onClick={ () => { dispatch(setActivePopup(el[1])) } }>
+                                                            {el[0]} {el[1]}
+                                                        </p>
                                                     )
                                                 })}
                                             </div>

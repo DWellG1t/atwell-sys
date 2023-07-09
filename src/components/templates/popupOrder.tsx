@@ -3,19 +3,19 @@ import styles from "./popupOrder.module.scss";
 import Typed from 'react-typed';
 
 import { useSelector, useDispatch } from "react-redux";
-import { setActive } from "@/store/popupSlice";
-// import store from "@/store";
+import { setActivePopup } from "@/store/popupSlice";
 
 export default function PopupOrder() {
 
     const dispatch = useDispatch();
-    const popupActive = useSelector((state: any) => state.popup);
+    const popupActive = useSelector((state: any) => state.popup.popupActive);
+    const popupText = useSelector((state: any) => state.popup.orderText);
 
     return (
-    <div className={ styles.popupOrder  + (popupActive.active == true ? ` ${styles._active}` : "" )}>
-      <div className={styles.popup__background  + (popupActive.active == true ? ` ${styles._active}` : "" )} onClick={ () => { dispatch(setActive('')) }  }></div>
+    <div className={ styles.popupOrder  + (popupActive ? ` ${styles._active}` : "" )}>
+      <div className={styles.popup__background  + (popupActive ? ` ${styles._active}` : "" )} onClick={ () => { dispatch(setActivePopup('false')) }  }></div>
       <section className={styles.popup}>
-            <div className={"_cross"} onClick={ () => { dispatch(setActive('')) }  }></div>
+            <div className={"_cross"} onClick={ () => { dispatch(setActivePopup('false')) }  }></div>
             <form action="">
 
                 <ul>
@@ -39,7 +39,7 @@ export default function PopupOrder() {
                 </ul>
             </form>
         <div className={styles.popup__terminal}>
-            <p>Заявка на ремонт ноутбука</p>
+            <p>{ popupText }</p>
             <div>
                 <h2>denis@service:~$</h2>
                 <p>

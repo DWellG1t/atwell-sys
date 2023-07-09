@@ -7,11 +7,11 @@ import { useSelector, useDispatch } from "react-redux";
 import { setActiveMobile } from "@/store/mobileSlice";
 
 export default function MobileMenu() {
-    const mobile = useSelector((state: any) => state.mobile.active);
+    const mobileActive = useSelector((state: any) => state.mobile.mobileActive);
     const dispatch = useDispatch();
 
     return (
-        <section className={styles.sectionMobile + (mobile ? ` ${styles._active}` : "")}>
+        <section className={styles.sectionMobile + (mobileActive ? ` ${styles._active}` : "")}>
             {/* Head */}
             <div className={styles.sectionMobile__header}>
                 <div className={styles.sectionMobile__logo}>
@@ -48,5 +48,6 @@ export default function MobileMenu() {
                 <p>фывафыв</p>
             </div>
         </section>
+        
     )
 }
